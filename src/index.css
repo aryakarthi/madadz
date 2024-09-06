@@ -1,0 +1,355 @@
+@font-face {
+  font-family: "kreadon-regular";
+  src: url("./assets/Kreadon-fonts/Kreadon-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "kreadon-bold";
+  src: url("./assets/Kreadon-fonts/Kreadon-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "kreadon-light";
+  src: url("./assets/Kreadon-fonts/Kreadon-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "kreadon-extrabold";
+  src: url("./assets/Kreadon-fonts/Kreadon-ExtraBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "kreadon-regular";
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #0c0e0c;
+  /* padding-top: 65px; */
+}
+
+/* font size */
+h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 2rem !important;
+  font-weight: 600 !important;
+}
+h3 {
+  font-size: 1.75rem !important;
+  font-family: 600 !important;
+}
+/* h4 {
+}
+h5 {
+} */
+h6 {
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+}
+p {
+  font-size: 1rem !important;
+}
+
+/* override */
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--bs-heading-color);
+}
+/* .fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+} */
+.sno {
+  color: white;
+}
+.section-title {
+  color: #6c67e0;
+}
+.aboutus-content h2 {
+  color: #6c67e0;
+}
+.aboutus-content p {
+  color: white;
+  text-align: center;
+}
+
+/* navbar */
+.nav-bar-section {
+  height: 60px;
+}
+
+/* home title */
+.home-container {
+  background-image: url(img/bg-2.jpg);
+  background-position: center;
+  object-fit: cover;
+  background-size: cover;
+  position: relative;
+}
+
+/* card design */
+
+.card-design {
+  background-color: transparent;
+  border: 1px solid #870be7;
+  /*  */
+  border-radius: 0;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  height: 460px;
+  overflow: hidden !important;
+  position: relative;
+  padding: 10px;
+}
+.card-design {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.card-design h6 {
+  color: #6c67e0;
+}
+.card-design p {
+  line-height: 30px;
+}
+.card-design a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: inherit; /* Adjust as needed */
+}
+.card-design a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #6c67e0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.card-design a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.card-design::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  /* transition: opacity 0.3s ease; */
+}
+
+.card-design:hover::before {
+  opacity: 1;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.card-design .card-body {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+/* about-img */
+.about-img {
+  position: relative;
+  overflow: hidden;
+}
+.about-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(26, 0, 74, 0.5), rgba(89, 0, 255, 0.5));
+  z-index: 5;
+}
+/* vertical line */
+
+.vertical-line {
+  width: 2px; /* Thickness of the line */
+  background-color: #fff; /* Color of the line */
+  height: 390vh; /* Full viewport height */
+  position: absolute; /* Fixed positioning to stay in place */
+  left: -10px; /* Center horizontally */
+  top: 0;
+  z-index: 0; /* Ensure it is above other content */
+}
+.scroll-point {
+  width: 4px; /* Width of the line */
+  height: 220px; /* Height of the line */
+  background-color: #ff7b00; /* Color of the line */
+  border-radius: 0; /* Remove the rounded corners */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.1s ease-out;
+}
+
+/* footer section */
+footer {
+  background-color: #0c0e0c;
+  color: #e5e5e5;
+}
+
+footer h5 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-family: "kreadon-bold";
+}
+
+footer h2 {
+  color: #ffffff;
+  font-size: 64px;
+  font-weight: 700;
+  font-family: "kreadon-extrabold";
+}
+
+footer .social-icons a {
+  color: #ffffff;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+footer .social-icons a:hover {
+  color: #ff7b00;
+}
+
+footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+footer ul li a {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-family: "kreadon-regular";
+}
+
+footer ul li a:hover {
+  color: #ff7b00;
+}
+
+footer p {
+  margin: 0;
+  color: #e5e5e5;
+  font-size: 26px;
+  font-family: "kreadon-extrabold";
+}
+
+footer p a {
+  color: #ffffff;
+}
+
+footer p a:hover {
+  color: #ff7b00;
+}
+
+/* mobile css */
+@media (max-width: 768px) {
+  .home-container {
+    height: unset !important;
+  }
+  .text-primary {
+    color: #ff7b00; /* Example color */
+  }
+  .h1 {
+    font-size: 36px !important; /* Adjust font size for mobile */
+  }
+  .card-design {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  footer h2 {
+    font-size: 32px;
+  }
+  .home-title h1 {
+    font-size: unset !important;
+  }
+
+  /* font size */
+  h1 {
+    font-size: 60px;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+  }
+  h3 {
+    font-size: 1.75rem !important;
+    font-family: 600 !important;
+  }
+  /* h4 {
+  }
+  h5 {
+  } */
+  h6 {
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+  }
+  p {
+    font-size: 1rem !important;
+  }
+}
+
+/* scroll */
+/* .custom-offcanvas.offcanvas {
+  animation: slideAndScale 0.5s ease-in-out forwards; /* Adjust animation timing 
+} */
+/* 
+@keyframes slideAndScale {
+  0% {
+    transform: translateY(-100%) scale(0.8); /* Start from top and scaled down 
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1); /* Slide to original position and scale up 
+    opacity: 1;
+  }
+} */
