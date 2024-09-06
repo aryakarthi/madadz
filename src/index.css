@@ -38,7 +38,7 @@ html {
 }
 
 body {
-  background-color: #0c0e0c;
+  background-color: #0c0e0c !important;
 }
 
 /* font size */
@@ -120,11 +120,11 @@ h6 {
 /* card design */
 
 .card-design {
-  background-color: transparent;
+  background-color: transparent !important;
   border: 1px solid #870be7;
   border-radius: 0;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px !important;
+  border-bottom-left-radius: 30px !important;
   height: 460px;
   overflow: hidden !important;
   position: relative;
@@ -344,7 +344,7 @@ footer p a:hover {
     font-family: 600 !important;
   }
 
- 
+
   h6 {
     font-size: 1.2rem !important;
     font-weight: 700 !important;
